@@ -95,6 +95,15 @@ TsfLogger >> debug: aMsgOrBlock [
 	^ self
 ]
 
+{ #category : 'error handling' }
+TsfLogger >> error: aMsgOrBlock [
+
+	(level <= self class errorLevel) ifTrue: [ 
+		self logInternalWithTag: 'ERROR' message: aMsgOrBlock value 
+	].
+	^ self
+]
+
 { #category : 'logging' }
 TsfLogger >> fatal: aMsgOrBlock [
 

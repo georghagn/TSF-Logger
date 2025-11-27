@@ -12,6 +12,19 @@ Class {
 	#tag : 'Appender'
 }
 
+{ #category : 'logging' }
+TsfMemoryAppender >> clearLog [
+
+
+]
+
+{ #category : 'initialization' }
+TsfMemoryAppender >> initialize [
+
+	super initialize.
+	logs := OrderedCollection new.
+]
+
 { #category : 'accessing' }
 TsfMemoryAppender >> logs [
 

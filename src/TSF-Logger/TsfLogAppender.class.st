@@ -53,3 +53,12 @@ TsfLogAppender >> record: aMsg [
 
 	self subclassResponsibility 
 ]
+
+{ #category : 'actions api' }
+TsfLogAppender >> recordTag: aTag message: aString [
+	"Die neue Hauptmethode für Appender. Hier wird formatiert und dann geschrieben."
+	| formattedString |
+	
+	formattedString := self formatter formatMessage: aString tag: aTag.
+	self record: formattedString.
+]

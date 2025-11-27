@@ -6,6 +6,12 @@ Class {
 	#tag : 'Appender'
 }
 
+{ #category : 'logging' }
+TsfTranscriptAppender >> clearLog [
+
+	
+]
+
 { #category : 'actions api' }
 TsfTranscriptAppender >> record: aRecord [
 
