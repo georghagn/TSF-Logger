@@ -9,6 +9,12 @@ Class {
 	#tag : 'Appender'
 }
 
+{ #category : 'initialization' }
+TsfFileAppender class >> defaultFileRef [
+
+	^ FileSystem disk workingDirectory / 'tsfLogger.log'.
+]
+
 { #category : 'instance creation' }
 TsfFileAppender class >> newOn: aFileRef [
 
