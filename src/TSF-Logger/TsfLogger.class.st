@@ -43,21 +43,6 @@ TsfLogger class >> new [
 		yourself
 ]
 
-{ #category : 'instance creation' }
-TsfLogger class >> on: aFormatter [
-
-	^ self new formatter: aFormatter.
-]
-
-{ #category : 'instance creation' }
-TsfLogger class >> on: anAppender with: aFormatter [
-
-	^ (self new)
-		addAppender: anAppender ;
-		formatter: aFormatter;
-	yourself
-]
-
 { #category : 'private - initialization' }
 TsfLogger class >> warnLevel [
 
