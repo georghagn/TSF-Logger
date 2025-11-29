@@ -46,5 +46,4 @@ BaselineOfTsfLogger >> definePackages: spec [
 		package: 'TSF-Logger';
 		package: 'TSF-Logger-Tests' with: [ spec requires: #('TSF-Logger') ].
 
-	spec repository: 'tonel://src'.
 ]
