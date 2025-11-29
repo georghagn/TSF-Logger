@@ -44,12 +44,7 @@ BaselineOfTsfLogger >> definePackages: spec [
 
 	spec 
 		package: 'TSF-Logger';
-		package: 'TSF-Logger-Appender' with: [ spec requires: #('TSF-Logger') ];
-		package: 'TSF-Logger-Tests' with: [ spec requires: #('TSF-Logger' 'TSF-Logger-Appender') ].
-			
-]
+		package: 'TSF-Logger-Tests' with: [ spec requires: #('TSF-Logger') ].
 
-{ #category : 'accessing' }
-BaselineOfTsfLogger >> projectClass [
-	^ MetacelloCypressBaselineProject
+	spec repository: 'tonel://src'.
 ]
