@@ -30,9 +30,9 @@ BaselineOfTsfLogger >> defineDependencies: spec [
 BaselineOfTsfLogger >> defineGroups: spec [
 
 	spec 
-		group: 'Core' with: #('TSF-Logger');
-		group: 'Tests' with: #('TSF-Logger-Tests');
-		group: 'default' with: #('Core' 'Tests').
+		group: 'core' with: #('TSF-Logger');
+		group: 'tests' with: #('TSF-Logger-Tests');
+		group: 'default' with: #('core' 'tests').
 		
 
 
