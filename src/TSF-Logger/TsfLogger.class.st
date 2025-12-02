@@ -5,15 +5,46 @@ Class {
 		'level',
 		'appenders'
 	],
+	#classInstVars : [
+		'defaultLogger'
+	],
 	#category : 'TSF-Logger-Core',
 	#package : 'TSF-Logger',
 	#tag : 'Core'
 }
 
+{ #category : 'start' }
+TsfLogger class >> debug: aStringOrBlock [
+
+    self default debug: aStringOrBlock
+]
+
 { #category : 'private - initialization' }
 TsfLogger class >> debugLevel [
 
 	^ 10.
+]
+
+{ #category : 'accessing' }
+TsfLogger class >> default [
+
+    ^ defaultLogger ifNil: [ 
+        defaultLogger := self new 
+            addAppender: TsfTranscriptAppender new;
+            yourself 
+    ]
+]
+
+{ #category : 'accessing' }
+TsfLogger class >> default: aLogger [
+
+    defaultLogger := aLogger
+]
+
+{ #category : 'error handling' }
+TsfLogger class >> error: aStringOrBlock [
+
+    self default error: aStringOrBlock
 ]
 
 { #category : 'private - initialization' }
@@ -22,10 +53,22 @@ TsfLogger class >> errorLevel [
 	^ 40.
 ]
 
+{ #category : 'logging' }
+TsfLogger class >> fatal: aStringOrBlock [
+
+    self default fatal: aStringOrBlock
+]
+
 { #category : 'private - initialization' }
 TsfLogger class >> fatalLevel [
 
 	^ 50.
+]
+
+{ #category : 'accessing - structure variables' }
+TsfLogger class >> info: aStringOrBlock [
+
+    self default info: aStringOrBlock
 ]
 
 { #category : 'private - initialization' }
@@ -41,6 +84,12 @@ TsfLogger class >> new [
 	^ super new 
 		addAppender: (TsfTranscriptAppender new);
 		yourself
+]
+
+{ #category : 'logging' }
+TsfLogger class >> warn: aStringOrBlock [
+
+    self default warn: aStringOrBlock
 ]
 
 { #category : 'private - initialization' }
