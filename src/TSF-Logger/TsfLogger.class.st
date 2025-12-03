@@ -13,12 +13,6 @@ Class {
 	#tag : 'Core'
 }
 
-{ #category : 'start' }
-TsfLogger class >> debug: aStringOrBlock [
-
-    self default debug: aStringOrBlock
-]
-
 { #category : 'private - initialization' }
 TsfLogger class >> debugLevel [
 
@@ -53,12 +47,6 @@ TsfLogger class >> errorLevel [
 	^ 40.
 ]
 
-{ #category : 'logging' }
-TsfLogger class >> fatal: aStringOrBlock [
-
-    self default fatal: aStringOrBlock
-]
-
 { #category : 'private - initialization' }
 TsfLogger class >> fatalLevel [
 
@@ -84,12 +72,6 @@ TsfLogger class >> new [
 	^ super new 
 		addAppender: (TsfTranscriptAppender new);
 		yourself
-]
-
-{ #category : 'logging' }
-TsfLogger class >> warn: aStringOrBlock [
-
-    self default warn: aStringOrBlock
 ]
 
 { #category : 'private - initialization' }
