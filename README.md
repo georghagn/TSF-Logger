@@ -1,8 +1,8 @@
-|<sub>🇬🇧 [German translation →](README.de.md)</sub>|
+|<sub>🇩🇪 [German translation →](README.de.md)</sub>|
 |----:|
 |    |
 
-|[![Pharo Version](https://img.shields.io/badge/Pharo-12.0%2B-blue.svg)](https://pharo.org)|[![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE) [![Dependencies](https://img.shields.io/badge/dependencies-zero-brightgreen.svg)](#)|
+|[![Pharo Version](https://img.shields.io/badge/Pharo-12.0%2B-blue.svg)](https://pharo.org)|[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](./LICENSE) [![Dependencies](https://img.shields.io/badge/dependencies-zero-brightgreen.svg)](#)|
 |----|----|
 |![TSF-Logger Logo](logo-logger.png)| ***TSF-Logger***<br>A robust, thread-safe, lightweight and zero-dependency Logging Framework for Pharo Smalltalk. Part of the **Tiny Smalltalk Framework Suite**|
 
